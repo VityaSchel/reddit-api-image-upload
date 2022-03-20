@@ -138,4 +138,4 @@ I don't know about any limitations but you defenetaly want to set-up User-Agent 
 
 ## License
 
-[MIT](./LICENSE)
+[MIT](https://github.com/VityaSchel/reddit-api-image-upload/LICENSE)
