@@ -1,0 +1,24 @@
+{
+  "name": "reddit-api-image-upload",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "NodeJS module for uploading images directly to Reddit server and then use it with any \"full-featured beta wrapper\" to submit post.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": ["reddit","api"],
+  "author": "vityaschel <hi@hloth.dev> (https://hloth.dev/)",
+  "license": "MIT",
+  "dependencies": {
+    "basic-authorization-header": "^0.2.7",
+    "fast-xml-parser": "^4.0.7",
+    "form-data": "^4.0.0",
+    "lodash": "^4.17.21",
+    "node-fetch": "^3.2.3"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "eslint": "^8.11.0"
+  }
+}
