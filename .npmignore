@@ -3,3 +3,4 @@ node_modules
 .eslintrc.cjs
 LICENSE
 test.js
+.env
