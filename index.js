@@ -1,4 +1,3 @@
-import fs from 'fs/promises'
 import fetch from 'node-fetch'
 import {FormData, Blob} from "formdata-node"
 import {fileFromPath} from "formdata-node/file-from-path"
