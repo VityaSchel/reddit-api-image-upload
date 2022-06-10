@@ -1,6 +1,7 @@
 import fs from 'fs/promises'
 import fetch from 'node-fetch'
-import FormData from 'form-data'
+import {FormData, Blob} from "formdata-node"
+import {fileFromPath} from "formdata-node/file-from-path"
 import path from 'path'
 import _ from 'lodash'
 import generateBasicAuth from 'basic-authorization-header'
@@ -73,7 +74,7 @@ async function uploadMediaFile(mediafile, token, userAgent) {
   let file, mimetype, filename
 
   if (typeof mediafile === 'string') {
-    file = await fs.readFile(mediafile)
+    file = await fileFromPath(mediafile)
     filename = path.basename(mediafile)
     mimetype = guessMimeType(filename)
   //} else if (file instanceof Buffer) {
@@ -92,12 +93,12 @@ async function uploadMediaFile(mediafile, token, userAgent) {
 function guessMimeType(filename) {
   const extension = path.extname(filename)
   const mimeTypes = {
-    'png': 'image/png',
-    'mov': 'video/quicktime',
-    'mp4': 'video/mp4',
-    'jpg': 'image/jpeg',
-    'jpeg': 'image/jpeg',
-    'gif': 'image/gif',
+    '.png': 'image/png',
+    '.mov': 'video/quicktime',
+    '.mp4': 'video/mp4',
+    '.jpg': 'image/jpeg',
+    '.jpeg': 'image/jpeg',
+    '.gif': 'image/gif',
   }
   return mimeTypes[extension] ?? mimeTypes.jpeg
 }

@@ -7,13 +7,18 @@
   "scripts": {
     "test": "node test.js"
   },
-  "keywords": ["reddit","api","reddit-api","reddit-api-wrappe"],
+  "keywords": [
+    "reddit",
+    "api",
+    "reddit-api",
+    "reddit-api-wrappe"
+  ],
   "author": "vityaschel <hi@hloth.dev> (https://hloth.dev/)",
   "license": "MIT",
   "dependencies": {
     "basic-authorization-header": "^0.2.7",
     "fast-xml-parser": "^4.0.7",
-    "form-data": "^4.0.0",
+    "formdata-node": "^4.3.2",
     "lodash": "^4.17.21",
     "node-fetch": "^3.2.3"
   },
